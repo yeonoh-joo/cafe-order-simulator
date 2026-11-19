@@ -32,27 +32,33 @@
 ## 폴더 구성
 
 ```
-cafe-simulator
-├── AndroidManifest.xml
-├── java/com/example/day1103_assignment
-│   └── MainActivity.java        # 화면 전환, 옵션 처리, 장바구니·포인트 로직
-├── res
-│   ├── layout/activity_main.xml
-│   ├── drawable/                # 메뉴 이미지 (저장소에 미포함)
-│   ├── raw/                     # 배경음악 (저장소에 미포함)
-│   └── values/strings.xml
-└── LICENSE.txt
+cafe-order-simulator
+├── app
+│   ├── build.gradle.kts
+│   └── src/main
+│       ├── AndroidManifest.xml
+│       ├── java/com/example/day1103_assignment
+│       │   └── MainActivity.java   # 화면 전환, 옵션 처리, 장바구니·포인트 로직
+│       └── res
+│           ├── layout/activity_main.xml
+│           ├── drawable/           # 메뉴 이미지 (저장소에 미포함)
+│           ├── raw/                # 배경음악 (저장소에 미포함)
+│           └── values/strings.xml
+├── gradle
+├── build.gradle.kts
+├── settings.gradle.kts
+├── gradle.properties
+├── gradlew, gradlew.bat
+└── LICENSE
 ```
 
 ## 실행 방법
 
-Gradle 설정 파일은 포함하지 않았습니다. 새 프로젝트에 소스를 가져와 실행합니다.
-
-1. Android Studio에서 **Empty Views Activity**(언어 Java)로 새 프로젝트를 만들고, 패키지명을 `com.example.day1103_assignment`로 지정합니다.
-2. 이 저장소의 `MainActivity.java`, `AndroidManifest.xml`, `res/layout`, `res/values`를 같은 위치에 덮어씁니다.
-3. 아래 리소스를 직접 준비해 넣습니다. 파일명이 다르면 빌드되지 않습니다.
-   - `res/raw/cafemusic.mp3`: 배경음악
-   - `res/drawable/`: 메뉴 이미지 22개
+1. 저장소를 내려받아 Android Studio에서 폴더를 엽니다(Open). Gradle Sync가 끝나면 `local.properties`는 자동으로 만들어집니다.
+2. 아래 리소스를 직접 준비해 넣습니다. 파일명이 다르면 빌드되지 않습니다.
+   - `app/src/main/res/raw/cafemusic.mp3`: 배경음악 (`raw` 폴더가 없으면 `res` 아래에 새로 만듭니다)
+   - `app/src/main/res/drawable/`: 메뉴 이미지 22개
+3. 에뮬레이터나 기기에서 실행합니다.
 
 <details>
 <summary>필요한 이미지 파일명</summary>
@@ -79,5 +85,5 @@ icemochain.jpg  icemochainwhip.jpg  icemochaout.png  icemochaoutwhip.png
 
 ## 라이선스
 
-- **소스 코드**: MIT License ([LICENSE.txt](LICENSE.txt))
+- **소스 코드**: MIT License ([LICENSE](LICENSE))
 - **메뉴 이미지·배경음악**: 저장소에 포함하지 않았으며, MIT 라이선스는 이 파일들에 적용되지 않습니다.
